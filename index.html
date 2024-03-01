@@ -23,10 +23,6 @@ Author URL: http://w3layouts.com
   <nav class="navbar navbar-expand-lg navbar-light py-lg-3 py-2">
     <div class="container">
       <a class="navbar-brand" href="index.html"> Yun-Ting Cheng</a>
-      <!-- if logo is image enable this   
-    <a class="navbar-brand" href="#index.html">
-        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-    </a> -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon fa fa-bars"></span>
@@ -34,6 +30,12 @@ Author URL: http://w3layouts.com
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+            <style>
+                .navbar-nav .nav-link {
+                  font-size: 20px;
+                  font-weight: bold;
+                }
+              </style>
           <li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li>
@@ -41,7 +43,14 @@ Author URL: http://w3layouts.com
             <a class="nav-link" href="research.html">Research</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="experiments.html">Experiments</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="presentations.html">Presentations</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="publications.html">Publications</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="YunTingCheng_cv.pdf"target="_blank">CV</a>
           </li>
@@ -50,6 +59,7 @@ Author URL: http://w3layouts.com
       </div>
     </div>
   </nav>
+
 </section>
  <!--  Main banner section -->
  <section class="w3l-main-banner" id="home">
@@ -59,11 +69,12 @@ Author URL: http://w3layouts.com
          
             <div class="slider-info banner-view text-center">
               <div class="banner-info container">
-                <img src="imgs/profile.jpg" alt="about image" class="img-fluid" width="150">                
-                <h3 class="banner-text mt-5">Yun-Ting Cheng
+                <img src="imgs/profile.jpg" alt="about image" class="img-fluid" width="300">                
+                <h3 class="banner-text mt-5" style="font-size: 60px; font-weight: bold">Yun-Ting Cheng (鄭昀庭)
                   </h3>
-<!--                   <p class="my-4 mb-5">Photographer</p><br>
- -->               
+                  <br><br>
+                  <p class="my-1 mb-2"style="font-size: 30px; font-weight: bold"><a href = "mailto: ycheng3@caltech.edu" style="color: #FF99FF;">ycheng3@caltech.edu</a><br>
+                  <p class="my-2 mb-2"style="font-size: 20px;">Room 380, Cahill Center for Astronomy and Astrophysics<br>
               </div>
             </div>
           
@@ -77,399 +88,24 @@ Author URL: http://w3layouts.com
  <div class="container py-md-3">
   <div class="heading text-center mx-auto">
     <!-- <h4 class="head">Welcome To My Page!</h4> -->
-    <div class="col-lg-12 col-md-8 col-sm-8 skills-bar-grids mb-4 pb-2">
-    <p class="my-3 head" style="font-size:110%;"> Hello, I'm Yun-Ting Cheng (鄭昀庭), a postdoctoral researcher at the Jet Propulsion Laboratory (JPL) and California Institute of Technology (Caltech), working with <a href="http://olivierdore.net/index.html"target="_blank">Olivier Doré</a> and <a href="https://science.jpl.nasa.gov/people/TChang/"target="_blank">Tzu-Ching Chang</a>. I completed my Ph.D. in the <a href="https://cosmology.caltech.edu/"target="_blank">Caltech Observational Cosmology group</a> under the supervision of <a href="https://pma.divisions.caltech.edu/people/james-j-jamie-bock"target="_blank">Jamie Bock</a>.
+    <div class="col-lg-12 col-md-8 col-sm-8 skills-bar-grids mb-4 pb-2 text-left">
+    <p class="my-3 head" style="font-size:110%;"> 
+        Hello, I'm a Research Scientist at the California Institute of Technology (Caltech) and a Visiting Scholar at the Jet Propulsion Laboratory (JPL). I work on the modeling, analysis, and pipeline development for cosmology and extragalactic background science for the <a href="https://spherex.caltech.edu/"target="_blank">SPHEREx</a> mission, scheduled to launch in early 2025.
 
     <br><br>
-    My research focuses on extracting cosmological and astrophysical information from large-scale structure surveys. A large part of my work focuses on "intensity mapping," which maps the large-scale structure using the full emission field instead of resolved sources as in conventional redshift surveys. I am interested in optimizing the extraction of desired information from current and future cosmological surveys (SPHEREx, Roman, Euclid, etc.) by (1) developing novel analysis algorithms to constrain information from intensity mapping datasets, and (2) constructing data-informed models to improve cosmological analysis.
-
+    My research aims to enhance our understanding of cosmology and extragalactic science questions using data from large-scale structure surveys. My work spans several areas within these themes, including (1) developing novel analysis algorithms to extract information from cosmological surveys, (2) constructing data-informed models to improve cosmological analyses, (3) analyzing existing datasets to derive constraints on cosmological and astrophysical information, (4) modeling foreground and systematic effects for future cosmological surveys, and (5) developing analysis pipelines and designing strategies to mitigate systematics in forthcoming large-scale structure surveys.
     <br><br>
-    My work spans a wide variety of topics in cosmology, including the development of data-driven algorithms for intensity mapping data analysis, pipeline construction and data analysis for the CIBER experiment to constrain the intra-halo light signal in the extragalactic background light, as well as the development of foreground mitigation algorithms for line intensity mapping surveys.
+    Currently, my research is geared toward preparing for the upcoming SPHEREx mission. In particular, I am focused on characterizing the systematic uncertainties in their cosmology pipeline, a critical challenge for one of their main goal of constraining primordial non-Gaussianity using its all-sky galaxy catalog. Additionally, I work on modeling the extragalactic background signal, which SPHEREx will probe with unprecedented high sensitivity and spectral resolution in the near-infrared.
+    <br><br>
+    A significant portion of my previous research has centered on "line intensity mapping," which utilizes the full emission field to map large-scale structures, unlike conventional redshift surveys that rely on resolved sources. Specifically, I developed strategies for mitigating foreground interference in line intensity mapping. Another key area of my past work involves studying the extragalactic background light, focusing on contributions from the intra-halo light, the diffuse stellar emission surrounding galaxies.
     </div>
-</p>
-      
-    </div>
-<!-- <div class="row mt-5 pt-3">
-    <div class="col-lg-4 col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
-        <h4>Design</h4>
-        <div class="progress">
-        <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 50% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      </div>
-    </div>
+</p> 
 </div>
-    <div class="col-lg-4 col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
-        <h4>Marketing</h4>
-        <div class="progress">
-        <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 80% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-      </div>
-    </div>
-</div>
-<div class="col-lg-4  col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
-    <h4>Photography</h4>
-    <div class="progress">
-    <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 60% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  </div>
-</div>
-</div>
-<div class="col-lg-4  col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
-    <h4>Branding</h4>
-    <div class="progress">
-    <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 70% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  </div>
-</div>
-</div>
-<div class="col-lg-4  col-md-4 col-sm-6 skills-bar-grids mb-4 pb-2">
-    <h4>Development</h4>
-    <div class="progress">
-    <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 90% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  </div>
-</div>
-</div>
-<div class="col-lg-4 col-md-4 col-sm-6 skills-bar-grids ">
-    <h4>SEO</h4>
-    <div class="progress">
-    <div class="progress-bar progress-bar-striped bg-color" role="progressbar" style="width: 80% ;height:4px;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
-  </div>
-</div>
-</div>
- -->
  </div>
  </div>
 </div>
  </section>
-<!-- <section class="w3l-feature-3" id="features">
-	<div class="grid top-bottom">
-		<div class="container">
-			<div class="heading text-center mx-auto">
-                <h3 class="head text-white">I'm Available For Hire</h3>
-                <p class="my-3 head text-white"> Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                  Nulla mollis dapibus nunc, ut rhoncus
-                  turpis sodales quis. Integer sit amet mattis quam.</p>
-              </div>
-			<div class="middle-section grid-column text-center mt-5 pt-3">
-				<div class="three-grids-columns">
-					<span class="fa fa-paint-brush"></span>
-					<h4>Design</h4>
-					<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc</p>
-					
-				</div>
-				<div class="three-grids-columns">
-					<span class="fa fa-ils"></span>
-					<h4>Marketing</h4>
-					<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc</p>
-					
-				</div>
-				<div class="three-grids-columns">
-					<span class="fa fa-camera"></span>
-					<h4>Photography</h4>
-					<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla mollis dapibus nunc</p>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
-<div class="products-4" id="portfolio">
-    <!-- Products4 block -->
-    <div id="products4-block" class="text-center">
-        <div class="container">
-            <div class="heading text-center mx-auto mb-5">
-                <h3 style="text-align:left">Contact</h3>
-                <p class="my-3 head" style="font-size:120%;text-align:left">
-                Email: <a href = "mailto: ycheng3@caltech.edu">ycheng3@caltech.edu</a> / <a href = "mailto: yun-ting.cheng@jpl.nasa.gov">yun-ting.cheng@jpl.nasa.gov</a><br>
-                <br>
-                Office: <br>
-                Caltch - Room 380, Cahill Center for Astronomy and Astrophysics<br>
-                JPL - 169-234<br>
-                <br>
-                Mailing Address: MC 367-17, 1200 E. California Blvd., Pasadena, CA 91125, USA.
-            </p>
-<!--               </div>
-            <input id="tab1" type="radio" name="tabs" checked>
-            <label class="tabtle" for="tab1">All Projects</label>
 
-            <input id="tab2" type="radio" name="tabs">
-            <label class="tabtle" for="tab2">Illustration</label>
-
-            <input id="tab3" type="radio" name="tabs">
-            <label class="tabtle" for="tab3">Photography</label>
-
-            <input id="tab4" type="radio" name="tabs">
-            <label class="tabtle" for="tab4">Website</label>
-
-            <section id="content1" class="tab-content text-left">
-                <div class="d-grid grid-col-3">
-                    <div class="product">
-                        <a href="assets/images/g1.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g1.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g2.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g2.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g3.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g3.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g4.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g4.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g5.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g5.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                       
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g6.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g6.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                    
-                    
-                </div>
-            </section>
-
-            <section id="content2" class="tab-content text-left">
-                <div class="d-grid grid-col-3">
-                    <div class="product">
-                        <a href="assets/images/g7.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g7.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g8.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g8.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                       
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g1.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g1.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                       
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g2.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g2.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                       
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g3.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g3.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g4.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g4.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                </div>
-            </section>
-
-            <section id="content3" class="tab-content text-left">
-                <div class="d-grid grid-col-3">
-                    <div class="product">
-                        <a href="assets/images/g5.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g5.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                      
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g6.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g6.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                       
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g7.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g7.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                </div>
-            </section>
-
-            <section id="content4" class="tab-content text-left">
-                <div class="d-grid grid-col-3">
-                    <div class="product">
-                        <a href="assets/images/g8.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g8.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                    <div class="product">
-                        <a href="assets/images/g1.jpg" data-lightbox="example-set"
-                            data-title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam architecto, ex veritatis">
-                            <figure>
-                                <img src="assets/images/g1.jpg" class="img-responsive" alt="" />
-                            </figure>
-                        </a>
-                        
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
- -->    <!-- Products4 block -->
-<!-- </div>
-<script src="assets/js/jquery-3.3.1.min.js"></script>
-<script src="assets/js/lightbox-plus-jquery.min.js"></script>
-<section class="services-12" id="experience">
-	<div class="form-12-content">
-		<div class="container">
-			<div class="grid grid-column-2 ">
-				
-				<div class="column1">
-          <h3 class="mb-5">Experiences</h3>
-					<div class="experience-top">
-            <h5>2018 - now</h5>
-						<h4>Fulltime Freelancer</h4>
-						<p class="my-3 text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-            </div>
-            <div class="experience-top">
-              <h5>2014 - 2017</h5>
-              <h4>Creative Director at Pixar Studio</h4>
-              <p class="my-3 text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-              </div>
-              <div class="experience-top">
-                <h5>2010 - 2014</h5>
-                <h4>Web Designer at Microsoft</h4>
-                <p class="my-3 text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-                </div>
-					</div>
-					<div class="column2">
-            <h3 class="mb-5">Education</h3>
-            <div class="experience-top">
-              <h5>2010</h5>
-              <h4>Master of Design, University of California</h4>
-              <p class="my-3 text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-              </div>
-              <div class="experience-top">
-                <h5>2007</h5>
-                <h4>Bachelor of Arts, Standford University</h4>
-                <p class="my-3 text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-                </div>
-                <div class="experience-top">
-                  <h5>2004</h5>
-                  <h4>Specialize App Design, Harvard University</h4>
-                  <p class="my-3 text-white">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae.</p>
-                  </div>
-					</div>
-			</div>
-		</div>
-	</div>
-</section>
- -->
-  <!--//customers -->
-<!-- </section> -->
- <!-- grids block 5 -->
- <!-- <section class="w3l-footer-29-main" id="footer">
-  <div class="footer-29 text-center">
-      <div class="container">
-        <div class="main-social-footer-29">
-  -->                   
-          <!-- <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a> -->
-          <!-- <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a> -->
-          <!-- <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a> -->
-          <!-- <a href="#google-plus" class="google-plus"><span class="fa fa-google-plus"></span></a> -->
-<!--           <a href="https://www.linkedin.com/in/yun-ting-cheng-a6374189/" class="linkedin"><span class="fa fa-linkedin"></span></a>
- -->      </div>
- <!--          <div class="bottom-copies text-center">
-              <p class="copy-footer-29">© 2020 My Website. All rights reserved | Designed by <a href="https://w3layouts.com">W3layouts</a></p>
-               
-          </div> -->
-      </div>
-  </div>
-   <!-- move top -->
-  <!-- <button onclick="topFunction()" id="movetop" title="Go to top">
-              <span class="fa fa-angle-up"></span>
-                 </button>
-                 <script>
-                     // When the user scrolls down 20px from the top of the document, show the button
-                     window.onscroll = function () {
-                         scrollFunction()
-                     };
-              
-                     function scrollFunction() {
-                         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                             document.getElementById("movetop").style.display = "block";
-                         } else {
-                             document.getElementById("movetop").style.display = "none";
-                         }
-                     }
-              
-                     // When the user clicks on the button, scroll to the top of the document
-                     function topFunction() {
-                         document.body.scrollTop = 0;
-                         document.documentElement.scrollTop = 0;
-                     }
-                 </script>
-  -->                <!-- /move top -->
-
-<!-- Smooth scrolling -->
 
 
 <!-- //home page service grids -->
@@ -539,9 +175,6 @@ Author URL: http://w3layouts.com
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
 
-<!-- Smooth scrolling -->
-
 </body>
 
 </html>
-<!-- // grids block 5 -->
