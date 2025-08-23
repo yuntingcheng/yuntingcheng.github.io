@@ -1,0 +1,335 @@
+/* style.css */
+
+/* --- Global Styles & High-Contrast Dark Theme --- */
+body {
+    background-color: #1c252c;
+    color: #f0f2f5;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    line-height: 1.6;
+}
+
+p {
+    font-size: 1.25rem; /* CHANGED: Further increased paragraph font size for better readability */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #ffffff;
+    padding-bottom: 1px;
+}
+
+h3 {
+    color: #aeb9c5;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0px;
+    margin-bottom: 1px; /* CHANGED: Reduced space below the heading line */
+    padding-bottom: 1px;
+    border-bottom: 1px solid #445460;
+}
+
+.main-title {
+    font-size: 2.5rem; /* You can adjust this value */
+}
+
+a {
+    color: #69b5ff;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+    color: #9acfff;
+    text-decoration: underline;
+}
+
+/* --- Title and Social Icons --- */
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    /* border-bottom: 2px solid #445460; */
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #445460
+}
+
+/* --- Social Icons Styles --- */
+.social-icons {
+    text-align: center; /* This centers the icons */
+    margin-bottom: 40px; /* Adds space below the icons */
+}
+
+.social-icons a {
+    color: #cdd1d6;
+    font-size: 2.0rem; /* CHANGED: Increased icon size from 1.6rem */
+    margin: 0 18px;
+    transition: color 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #69b5ff;
+    text-decoration: none;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background-color: #2c3a44;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid #1c252c;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #f0f2f5;
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 1.15rem;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #445460;
+    text-decoration: none;
+}
+
+nav a.active {
+    color: #ffffff;
+    background-color: #E69500;
+}
+
+/* --- NEW Profile Header Section --- */
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Space between photo and name */
+    margin-bottom: -30px;
+}
+
+.profile-photo {
+    max-width: 150px; /* Adjusted size to better match screenshot */
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #445460;
+    object-fit: cover;
+}
+
+.chinese-name {
+    display: flex; /* Puts the Chinese name on a new line */
+    font-size: 2.3rem;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+/* --- Home Page Profile Section --- */
+.profile-section {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+    background-color: #2c3a44;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.profile-photo {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #445460;
+}
+
+/* --- Research & Experiments Item Card --- */
+.item-card {
+    display: flex;
+    align-items: flex-start;
+    text-align: justify;
+    gap: 30px;
+    margin-bottom: 30px;
+    background-color: #2c3a44;
+    padding: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+.item-card img {
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.item-card-text h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.item-card p {
+    font-size: 1.0rem;
+}
+
+
+/* --- Bullet Points --- */
+.bullet-item {
+    padding-left: 2em; 
+    text-indent: -1.2em;
+    margin: 0.2em 0;
+}
+
+.bullet-item::before {
+    content: "• "; 
+}
+
+/* --- Lists for Publications & Presentations (Single Box Style) --- */
+.list-section ul, 
+.list-section ol { /* CHANGED: Now applies to ordered lists too */
+    margin: 0;
+    padding: 20px 30px 20px 50px; /* Increased left padding for numbers */
+    background-color: #2c3a44;
+    border-radius: 8px;
+}
+
+.list-section li {
+    padding: 3px 0;
+}
+
+.list-section li:last-child {
+    border-bottom: none;
+}
+
+/* --- Contact List on Home Page --- */
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    text-align: right;
+    /* border-bottom: 1px solid #445460;  */
+}
+
+.contact-list li {
+    margin-bottom: 10px; /* Adds a bit of space between each line */
+}
+
+.contact-list strong {
+    color: #ffffff; /* Makes the labels slighly brighter */
+}
+
+
+/* --- Research Theme Dropdowns --- */
+.research-theme {
+    background-color: #2c3a44;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #445460;
+}
+
+.research-theme summary {
+    padding: 15px 20px;
+    cursor: pointer;
+    outline: none;
+    list-style: none; /* Removes the default triangle */
+}
+
+.research-theme summary h2 {
+    display: inline;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Custom dropdown arrow */
+.research-theme summary::before {
+    content: '▶'; /* Arrow pointing right when closed */
+    font-size: 0.8em;
+    margin-right: 15px;
+    display: inline-block; /* Helps with alignment */
+    transition: content 0.2s; /* Optional: for browsers that support it */
+}
+
+.research-theme[open] > summary::before {
+    content: '▼'; /* Arrow pointing down when open */
+}
+
+.theme-intro {
+    padding: 0px 50px 0px 50px; /* Adds spacing around the text */
+    text-align: justify;
+    font-size: 1.0rem;
+    margin-top: -10px; /* ADDED: This now controls the space */
+}
+
+/* Style for the project cards inside a theme */
+.project-card {
+    margin: 0 20px 20px 20px;
+    background-color: #1c2c35; /* Darker background to stand out */
+    border: 1px solid #445460;
+}
+
+.project-card h3 {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 15px;
+}
+
+.project-card h4 {
+    font-size: 1rem;
+    color: #aeb9c5;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.project-card ul {
+    padding-left: 30px;
+    margin: 0;
+}
+
+.project-card li {
+    font-size: 1rem;
+    padding: 0;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #9ab;
+    border-top: 1px solid #2c3a44;
+    height: 20px;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .profile-section, .item-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item-card img {
+        max-width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
