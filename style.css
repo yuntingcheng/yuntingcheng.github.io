@@ -24,6 +24,15 @@ h1 {
     padding-bottom: 1px;
 }
 
+h2 {
+    color: #ffffff;
+    /* font-size: 1.2rem;
+    font-weight: 600; */
+    margin-top: 10px;
+    margin-bottom: 0px; /* CHANGED: Reduced space below the heading line */
+    padding-bottom: 1px;
+}
+
 h3 {
     color: #aeb9c5;
     font-size: 1.2rem;
@@ -70,8 +79,8 @@ a:hover {
 
 .social-icons a {
     color: #cdd1d6;
-    font-size: 2.0rem; /* CHANGED: Increased icon size from 1.6rem */
-    margin: 0 18px;
+    font-size: 1.8rem; /* CHANGED: Increased icon size from 1.6rem */
+    margin: 0 10px;
     transition: color 0.2s ease-in-out;
 }
 
@@ -165,7 +174,7 @@ nav a.active {
     gap: 30px;
     margin-bottom: 30px;
     background-color: #2c3a44;
-    padding: 20px;
+    padding: 15px;
     border-radius: 8px;
     border: none;
 }
@@ -223,6 +232,7 @@ nav a.active {
     font-size: 1.2rem;
     line-height: 1.2;
     text-align: right;
+    font-size: 0.8em;
     /* border-bottom: 1px solid #445460;  */
 }
 
@@ -270,7 +280,7 @@ nav a.active {
 }
 
 .theme-intro {
-    padding: 0px 50px 0px 50px; /* Adds spacing around the text */
+    padding: 0 15px 10px 15px; /* Adds spacing around the text */
     text-align: justify;
     font-size: 1.0rem;
     margin-top: -10px; /* ADDED: This now controls the space */
@@ -319,17 +329,22 @@ footer {
 
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
-    .profile-section, .item-card {
-        flex-direction: column;
-        text-align: center;
+    /* --- General Font & Layout Adjustments --- */
+    .main-title {
+        font-size: 2.0rem;
+    }
+    
+    .intro-text,
+    .item-card p {
+        font-size: 1.0rem;
+        text-align: left;
     }
 
-    .item-card img {
-        max-width: 100%;
-    }
-
+    /* --- Top Navigation --- */
     nav {
-        flex-direction: column;
-        gap: 10px;
+        overflow-x: auto; /* Allows horizontal scrolling */
+        white-space: nowrap; /* Prevents links from wrapping to the next line */
+        justify-content: flex-start; /* Aligns links to the left */
+        padding: 0 10px; /* Adds some side padding */
     }
 }
