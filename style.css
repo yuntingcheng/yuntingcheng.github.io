@@ -1,7 +1,17 @@
+/*
+ * Cleaned and Re-organized Stylesheet
+ * ------------------------------------
+ * This CSS file is organized into logical sections for easier maintenance.
+ * 1. Global Styles: Basic styles for the entire site (typography, links).
+ * 2. Header & Nav: Styles for the main navigation bar.
+ * 3. Layout & Reusable Components: Styles for common elements used on multiple pages.
+ * 4. Page-Specific Styles: Styles unique to a particular page.
+ * 5. Footer: Styles for the site footer.
+ * 6. Responsive Design: Styles for mobile and smaller screens.
+ */
+
 /* ===================================================================
    1. Global Styles & Theme
-   - These styles apply to the entire website, defining the basic
-     look, feel, typography, and link behavior.
    =================================================================== */
 body {
     background-color: #1c252c;
@@ -39,11 +49,8 @@ h3 {
     border-bottom: 1px solid #445460;
 }
 
-h1 + p {
-    margin-top: 3px;
-    margin-bottom: 3px;
-}
-
+/* Reduced spacing for paragraphs following headings */
+h1 + p,
 h2 + p {
     margin-top: 3px;
     margin-bottom: 3px;
@@ -66,8 +73,6 @@ a:hover {
 
 /* ===================================================================
    2. Header & Navigation Bar
-   - Styles for the sticky header and the main navigation links
-     that appear on every page.
    =================================================================== */
 header {
     background-color: #2c3a44;
@@ -106,10 +111,72 @@ nav a.active {
 }
 
 /* ===================================================================
-   3. Page-Specific Sections & Components
+   3. Layout & Reusable Components
    =================================================================== */
 
-/* --- 3a. Home Page (index.html) --- */
+/* --- Card with image and text (Home, Research, Experiments) --- */
+.item-card {
+    display: flex;
+    align-items: flex-start;
+    text-align: justify;
+    gap: 30px;
+    margin-bottom: 30px;
+    background-color: #2c3a44;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+.item-card img {
+    max-width: 280px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.item-card-text h3 {
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.item-card p {
+    font-size: 1.0rem;
+}
+
+/* --- Justified text block (Research, Experiments, Talks, Publications) --- */
+.intro-text-block {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.intro-text-block p,
+.intro-text-block li {
+    font-size: 1.05rem;
+}
+
+/* --- Styled lists (Talks, Publications) --- */
+.list-section ul,
+.list-section ol {
+    margin: 0;
+    padding: 20px 30px 20px 50px;
+    background-color: #2c3a44;
+    border-radius: 8px;
+}
+
+.list-section li {
+    padding: 3px 0;
+}
+
+.list-section li:last-child {
+    border-bottom: none;
+}
+
+/* ===================================================================
+   4. Page-Specific Styles
+   =================================================================== */
+
+/* --- 4a. Home Page --- */
 .profile-header {
     display: flex;
     align-items: center;
@@ -141,10 +208,6 @@ nav a.active {
     margin-bottom: 10px;
 }
 
-.contact-list strong {
-    color: #ffffff;
-}
-
 .social-icons {
     text-align: center;
     margin-bottom: 40px;
@@ -162,58 +225,7 @@ nav a.active {
     text-decoration: none;
 }
 
-.bullet-item {
-    padding-left: 2em;
-    text-indent: -1.2em;
-    margin: 0.2em 0;
-}
-
-.bullet-item::before {
-    content: "• ";
-}
-
-/* --- 3b. Shared Item Card (used on Home, Research, Experiments) --- */
-.item-card {
-    display: flex;
-    align-items: flex-start;
-    text-align: justify;
-    gap: 30px;
-    margin-bottom: 30px;
-    background-color: #2c3a44;
-    padding: 15px;
-    border-radius: 8px;
-    border: none;
-}
-
-.item-card img {
-    max-width: 280px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 4px;
-    margin-top: 30px;
-}
-
-.item-card-text h3 {
-    margin-top: 0;
-    color: #ffffff;
-}
-
-.item-card p {
-    font-size: 1.0rem;
-}
-
-/* --- Styling for intro text blocks (e.g., on Research page) --- */
-.intro-text-block {
-    text-align: justify;
-    margin-bottom: 10px;
-}
-
-.intro-text-block p,
-.intro-text-block li {
-    font-size: 1.05rem;
-}
-
-/* --- 3c. Research & Experiments Page Dropdowns --- */
+/* --- 4b. Research & Experiments Pages --- */
 .research-theme {
     background-color: #2c3a44;
     border-radius: 8px;
@@ -282,26 +294,8 @@ nav a.active {
     padding: 0;
 }
 
-/* --- 3d. List Sections (Publications & Talks) --- */
-.list-section ul,
-.list-section ol {
-    margin: 0;
-    padding: 20px 30px 20px 50px;
-    background-color: #2c3a44;
-    border-radius: 8px;
-}
-
-.list-section li {
-    padding: 3px 0;
-}
-
-.list-section li:last-child {
-    border-bottom: none;
-}
-
 /* ===================================================================
-   4. Footer
-   - Styles for the footer at the bottom of each page.
+   5. Footer
    =================================================================== */
 footer {
     text-align: center;
@@ -314,9 +308,7 @@ footer {
 }
 
 /* ===================================================================
-   5. Responsive Design
-   - Media queries to adjust the layout for smaller screens,
-     such as tablets and mobile devices.
+   6. Responsive Design
    =================================================================== */
 @media (max-width: 768px) {
     .main-title {
@@ -333,5 +325,32 @@ footer {
         white-space: nowrap; /* Prevents links from wrapping */
         justify-content: flex-start; /* Aligns links to the left */
         padding: 0 10px;
+    }
+
+    /* Home page: Stack profile photo and name vertically */
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        margin-bottom: 0;
+    }
+
+    /* Home page: Align contact info left on small screens */
+    .contact-list {
+        text-align: left;
+        margin-top: 20px;
+    }
+
+    /* All pages: Stack content within item-cards vertically */
+    .item-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Adjust image within stacked item-card */
+    .item-card img {
+        margin-top: 0;
+        margin-bottom: 15px;
+        max-width: 100%; /* Ensure image is not wider than the card */
     }
 }
