@@ -1,16 +1,14 @@
-/* style.css */
-
-/* --- Global Styles & High-Contrast Dark Theme --- */
+/* ===================================================================
+   1. Global Styles & Theme
+   - These styles apply to the entire website, defining the basic
+     look, feel, typography, and link behavior.
+   =================================================================== */
 body {
     background-color: #1c252c;
     color: #f0f2f5;
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     line-height: 1.6;
-}
-
-p {
-    font-size: 1.25rem; /* CHANGED: Further increased paragraph font size for better readability */
 }
 
 .container {
@@ -26,10 +24,8 @@ h1 {
 
 h2 {
     color: #ffffff;
-    /* font-size: 1.2rem;
-    font-weight: 600; */
     margin-top: 10px;
-    margin-bottom: 0px; /* CHANGED: Reduced space below the heading line */
+    margin-bottom: 0px;
     padding-bottom: 1px;
 }
 
@@ -38,13 +34,23 @@ h3 {
     font-size: 1.2rem;
     font-weight: 600;
     margin-top: 0px;
-    margin-bottom: 1px; /* CHANGED: Reduced space below the heading line */
+    margin-bottom: 1px;
     padding-bottom: 1px;
     border-bottom: 1px solid #445460;
 }
 
-.main-title {
-    font-size: 2.5rem; /* You can adjust this value */
+h1 + p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+h2 + p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+p {
+    font-size: 1.25rem;
 }
 
 a {
@@ -58,38 +64,11 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- Title and Social Icons --- */
-.title-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    /* border-bottom: 2px solid #445460; */
-    padding-bottom: 10px;
-    margin-bottom: 40px;
-    border-bottom: 1px solid #445460
-}
-
-/* --- Social Icons Styles --- */
-.social-icons {
-    text-align: center; /* This centers the icons */
-    margin-bottom: 40px; /* Adds space below the icons */
-}
-
-.social-icons a {
-    color: #cdd1d6;
-    font-size: 1.8rem; /* CHANGED: Increased icon size from 1.6rem */
-    margin: 0 10px;
-    transition: color 0.2s ease-in-out;
-}
-
-.social-icons a:hover {
-    color: #69b5ff;
-    text-decoration: none;
-}
-
-/* --- Header & Navigation --- */
+/* ===================================================================
+   2. Header & Navigation Bar
+   - Styles for the sticky header and the main navigation links
+     that appear on every page.
+   =================================================================== */
 header {
     background-color: #2c3a44;
     padding: 1.2rem 0;
@@ -126,47 +105,74 @@ nav a.active {
     background-color: #E69500;
 }
 
-/* --- NEW Profile Header Section --- */
+/* ===================================================================
+   3. Page-Specific Sections & Components
+   =================================================================== */
+
+/* --- 3a. Home Page (index.html) --- */
 .profile-header {
     display: flex;
     align-items: center;
-    gap: 50px; /* Space between photo and name */
+    gap: 50px;
     margin-bottom: -30px;
 }
 
 .profile-photo {
-    max-width: 150px; /* Adjusted size to better match screenshot */
+    max-width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 3px solid #445460;
     object-fit: cover;
 }
 
-.chinese-name {
-    display: flex; /* Puts the Chinese name on a new line */
-    font-size: 2.3rem;
-    font-weight: 400;
-    margin-top: 5px;
+.main-title {
+    font-size: 2.5rem;
 }
 
-/* --- Home Page Profile Section --- */
-.profile-section {
-    display: flex;
-    gap: 50px;
-    margin-top: 40px;
-    background-color: #2c3a44;
-    padding: 25px;
-    border-radius: 8px;
+.contact-list {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.2;
+    text-align: right;
+    font-size: 0.8em;
 }
 
-.profile-photo {
-    max-width: 200px;
-    height: auto;
-    border-radius: 50%;
-    border: 3px solid #445460;
+.contact-list li {
+    margin-bottom: 10px;
 }
 
-/* --- Research & Experiments Item Card --- */
+.contact-list strong {
+    color: #ffffff;
+}
+
+.social-icons {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    color: #cdd1d6;
+    font-size: 1.8rem;
+    margin: 0 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+    color: #69b5ff;
+    text-decoration: none;
+}
+
+.bullet-item {
+    padding-left: 2em;
+    text-indent: -1.2em;
+    margin: 0.2em 0;
+}
+
+.bullet-item::before {
+    content: "• ";
+}
+
+/* --- 3b. Shared Item Card (used on Home, Research, Experiments) --- */
 .item-card {
     display: flex;
     align-items: flex-start;
@@ -196,56 +202,18 @@ nav a.active {
     font-size: 1.0rem;
 }
 
-
-/* --- Bullet Points --- */
-.bullet-item {
-    padding-left: 2em; 
-    text-indent: -1.2em;
-    margin: 0.2em 0;
+/* --- Styling for intro text blocks (e.g., on Research page) --- */
+.intro-text-block {
+    text-align: justify;
+    margin-bottom: 10px;
 }
 
-.bullet-item::before {
-    content: "• "; 
+.intro-text-block p,
+.intro-text-block li {
+    font-size: 1.05rem;
 }
 
-/* --- Lists for Publications & Presentations (Single Box Style) --- */
-.list-section ul, 
-.list-section ol { /* CHANGED: Now applies to ordered lists too */
-    margin: 0;
-    padding: 20px 30px 20px 50px; /* Increased left padding for numbers */
-    background-color: #2c3a44;
-    border-radius: 8px;
-}
-
-.list-section li {
-    padding: 3px 0;
-}
-
-.list-section li:last-child {
-    border-bottom: none;
-}
-
-/* --- Contact List on Home Page --- */
-.contact-list {
-    list-style: none;
-    padding-left: 0;
-    font-size: 1.2rem;
-    line-height: 1.2;
-    text-align: right;
-    font-size: 0.8em;
-    /* border-bottom: 1px solid #445460;  */
-}
-
-.contact-list li {
-    margin-bottom: 10px; /* Adds a bit of space between each line */
-}
-
-.contact-list strong {
-    color: #ffffff; /* Makes the labels slighly brighter */
-}
-
-
-/* --- Research Theme Dropdowns --- */
+/* --- 3c. Research & Experiments Page Dropdowns --- */
 .research-theme {
     background-color: #2c3a44;
     border-radius: 8px;
@@ -266,13 +234,12 @@ nav a.active {
     font-size: 1.5rem;
 }
 
-/* Custom dropdown arrow */
 .research-theme summary::before {
     content: '▶'; /* Arrow pointing right when closed */
     font-size: 0.8em;
     margin-right: 15px;
-    display: inline-block; /* Helps with alignment */
-    transition: content 0.2s; /* Optional: for browsers that support it */
+    display: inline-block;
+    transition: content 0.2s;
 }
 
 .research-theme[open] > summary::before {
@@ -280,13 +247,12 @@ nav a.active {
 }
 
 .theme-intro {
-    padding: 0 15px 10px 15px; /* Adds spacing around the text */
+    padding: 0 15px 10px 15px;
     text-align: justify;
     font-size: 1.0rem;
-    margin-top: -10px; /* ADDED: This now controls the space */
+    margin-top: -10px;
 }
 
-/* Style for the project cards inside a theme */
 .project-card {
     margin: 0 20px 20px 20px;
     background-color: #1c2c35; /* Darker background to stand out */
@@ -316,7 +282,27 @@ nav a.active {
     padding: 0;
 }
 
-/* --- Footer --- */
+/* --- 3d. List Sections (Publications & Talks) --- */
+.list-section ul,
+.list-section ol {
+    margin: 0;
+    padding: 20px 30px 20px 50px;
+    background-color: #2c3a44;
+    border-radius: 8px;
+}
+
+.list-section li {
+    padding: 3px 0;
+}
+
+.list-section li:last-child {
+    border-bottom: none;
+}
+
+/* ===================================================================
+   4. Footer
+   - Styles for the footer at the bottom of each page.
+   =================================================================== */
 footer {
     text-align: center;
     padding: 20px;
@@ -327,24 +313,25 @@ footer {
     height: 20px;
 }
 
-/* --- Responsive Design --- */
+/* ===================================================================
+   5. Responsive Design
+   - Media queries to adjust the layout for smaller screens,
+     such as tablets and mobile devices.
+   =================================================================== */
 @media (max-width: 768px) {
-    /* --- General Font & Layout Adjustments --- */
     .main-title {
         font-size: 2.0rem;
     }
-    
-    .intro-text,
+
     .item-card p {
         font-size: 1.0rem;
         text-align: left;
     }
 
-    /* --- Top Navigation --- */
     nav {
         overflow-x: auto; /* Allows horizontal scrolling */
-        white-space: nowrap; /* Prevents links from wrapping to the next line */
+        white-space: nowrap; /* Prevents links from wrapping */
         justify-content: flex-start; /* Aligns links to the left */
-        padding: 0 10px; /* Adds some side padding */
+        padding: 0 10px;
     }
 }
